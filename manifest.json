@@ -1,11 +1,16 @@
 {  
-  "manifest_version": 2,  
+  "manifest_version": 1,  
 
   "name": "Twitch Channel Point",  
   "description": "This extension allows your points to be collected automatically.",  
   "version": "1.0",    
-  "permissions": ["tabs", "<all_urls>"],  
-
+  "permissions": ["https://twitch.tv/*"],  
+  
+  "content_scripts": [
+    {
+      "js": ["content_script.js"]
+    }
+  ],
   "browser_action": {  
       "default_icon": "icon.png",  
       "default_popup": "popup.html"
