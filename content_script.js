@@ -1,12 +1,6 @@
-setInterval(function() {
-  var elements = document.getElementsByClassName("tw-button tw-button--success tw-interactive");
+setInterval(function () {
+  const claimBonusButton = document.querySelector("[aria-label='Claim Bonus']");
 
-  elements = Array.prototype.slice.call(elements);
-
-   if(!elements.length) return;
-  elements.forEach(function(btn) {
-     btn.click();
-  });
-}, 200);
-
-
+  if (claimBonusButton == null) return;
+  claimBonusButton.click();
+}, 2000);
